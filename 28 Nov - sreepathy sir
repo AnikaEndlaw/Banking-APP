@@ -1,0 +1,348 @@
+msis@msis-V520S-08IKL:~$ mkdir bankingapp
+msis@msis-V520S-08IKL:~$ cd bankingPP/
+bash: cd: bankingPP/: No such file or directory
+msis@msis-V520S-08IKL:~$ ls -a
+.              Desktop             .ipython     .profile
+..             Documents           .jupyter     Public
+assets         Downloads           LICENSE.txt  README.txt
+banking-app    elements.html       .local       snap
+bankingapp     .fontconfig         midterm      .ssh
+.bash_history  generic.html        mlenv        .sudo_as_admin_successful
+.bash_logout   .gnupg              Music        Templates
+.bashrc        images              myfolder     Untitled.ipynb
+.cache         index.html          mysite       Videos
+.config        .ipynb_checkpoints  Pictures
+msis@msis-V520S-08IKL:~$ sudo apt-get install git
+[sudo] password for msis: 
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl
+0 upgraded, 3 newly installed, 0 to remove and 46 not upgraded.
+Need to get 4,147 kB of archives.
+After this operation, 21.0 MB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 https://in.archive.ubuntu.com/ubuntu jammy/main amd64 liberror-perl all 0.17029-1 [26.5 kB]
+Get:2 https://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 git-man all 1:2.34.1-1ubuntu1.15 [955 kB]
+Get:3 https://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 git amd64 1:2.34.1-1ubuntu1.15 [3,166 kB]
+Fetched 4,147 kB in 5s (766 kB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 187606 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-1_all.deb ...
+Unpacking liberror-perl (0.17029-1) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.34.1-1ubuntu1.15_all.deb ...
+Unpacking git-man (1:2.34.1-1ubuntu1.15) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.34.1-1ubuntu1.15_amd64.deb ...
+Unpacking git (1:2.34.1-1ubuntu1.15) ...
+Setting up liberror-perl (0.17029-1) ...
+Setting up git-man (1:2.34.1-1ubuntu1.15) ...
+Setting up git (1:2.34.1-1ubuntu1.15) ...
+Processing triggers for man-db (2.10.2-1) ...
+msis@msis-V520S-08IKL:~$ sudo git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/msis/.git/
+msis@msis-V520S-08IKL:~$ ls -a
+.            bankingapp     .cache     Downloads      .git        .ipynb_checkpoints  .local   myfolder  Public      .sudo_as_admin_successful
+..           .bash_history  .config    elements.html  .gnupg      .ipython            midterm  mysite    README.txt  Templates
+assets       .bash_logout   Desktop    .fontconfig    images      .jupyter            mlenv    Pictures  snap        Untitled.ipynb
+banking-app  .bashrc        Documents  generic.html   index.html  LICENSE.txt         Music    .profile  .ssh        Videos
+msis@msis-V520S-08IKL:~$ sudo git remote add origin https://github.com/AnikaEndlaw/Banking-APP.git
+msis@msis-V520S-08IKL:~$ ls
+assets       bankingapp  Documents  elements.html  images      LICENSE.txt  mlenv  myfolder  Pictures  README.txt  Templates       Videos
+banking-app  Desktop     Downloads  generic.html   index.html  midterm      Music  mysite    Public    snap        Untitled.ipynb
+msis@msis-V520S-08IKL:~$ cd banking-app/
+msis@msis-V520S-08IKL:~/banking-app$ sudo apt-get install git
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+git is already the newest version (1:2.34.1-1ubuntu1.15).
+0 upgraded, 0 newly installed, 0 to remove and 46 not upgraded.
+msis@msis-V520S-08IKL:~/banking-app$ sudo git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/msis/banking-app/.git/
+msis@msis-V520S-08IKL:~/banking-app$ sudo git remote add origin https://github.com/AnikaEndlaw/Banking-APP.git
+msis@msis-V520S-08IKL:~/banking-app$ ls
+msis@msis-V520S-08IKL:~/banking-app$ sudo git pull origin main
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.80 KiB | 1.80 MiB/s, done.
+From https://github.com/AnikaEndlaw/Banking-APP
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+msis@msis-V520S-08IKL:~/banking-app$ ls
+README.md
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch
+* master
+msis@msis-V520S-08IKL:~/banking-app$ ^C
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch -r
+  origin/main
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch -a
+* master
+  remotes/origin/main
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch main 
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch
+  main
+* master
+msis@msis-V520S-08IKL:~/banking-app$ sudo git checkout main
+Switched to branch 'main'
+msis@msis-V520S-08IKL:~/banking-app$ ls
+README.md
+msis@msis-V520S-08IKL:~/banking-app$  touch index.php
+msis@msis-V520S-08IKL:~/banking-app$ ls
+index.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ cat index.php
+msis@msis-V520S-08IKL:~/banking-app$ echo "This is the homepage of the app" > index.php
+msis@msis-V520S-08IKL:~/banking-app$ cat index.php
+This is the homepage of the app
+msis@msis-V520S-08IKL:~/banking-app$ sudo git status
+[sudo] password for msis: 
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	index.php
+
+nothing added to commit but untracked files present (use "git add" to track)
+msis@msis-V520S-08IKL:~/banking-app$ sudo git add index.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   index.php
+
+msis@msis-V520S-08IKL:~/banking-app$ echo "This is updated Home Page" > index.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   index.php
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.php
+
+msis@msis-V520S-08IKL:~/banking-app$ touch about.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   index.php
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	about.php
+
+msis@msis-V520S-08IKL:~/banking-app$ sudo git add -A
+msis@msis-V520S-08IKL:~/banking-app$ sudo git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   about.php
+	new file:   index.php
+
+msis@msis-V520S-08IKL:~/banking-app$ sudo git commit index.php -m "My v1 of index file"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'root@msis-V520S-08IKL.(none)')
+msis@msis-V520S-08IKL:~/banking-app$ sudo git config --global user.email "anikaaendlaw@gmail.com"
+msis@msis-V520S-08IKL:~/banking-app$ sudo git commit index.php -m "My v1 of index file"
+[main 7aecbc1] My v1 of index file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git push origin main 
+Username for 'https://github.com': AnikaEndlaw
+Password for 'https://AnikaEndlaw@github.com': 
+msis@msis-V520S-08IKL:~/banking-app$ sudo git push origin main
+Username for 'https://github.com': AnikaEndlaw
+Password for 'https://AnikaEndlaw@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/AnikaEndlaw/Banking-APP.git/'
+msis@msis-V520S-08IKL:~/banking-app$ touch githubpw.txt
+msis@msis-V520S-08IKL:~/banking-app$ echo "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" > githubpw.txt 
+msis@msis-V520S-08IKL:~/banking-app$ cat githubpw.txt 
+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
+msis@msis-V520S-08IKL:~/banking-app$ sudo git commit index.php -m "My v1 of index file"
+[sudo] password for msis: 
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	about.php
+	githubpw.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+msis@msis-V520S-08IKL:~/banking-app$ sudo  git add about.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git commit index.php -m "My v1 of index file"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	about.php
+	githubpw.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+msis@msis-V520S-08IKL:~/banking-app$ sudo git add about.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo  git add status
+fatal: pathspec 'status' did not match any files
+msis@msis-V520S-08IKL:~/banking-app$ sudo touch myfile.php
+msis@msis-V520S-08IKL:~/banking-app$ echo "my file" > myfile.php 
+bash: myfile.php: Permission denied
+msis@msis-V520S-08IKL:~/banking-app$ sudo echo "my file" > myfile.php 
+bash: myfile.php: Permission denied
+msis@msis-V520S-08IKL:~/banking-app$ sudo chown -R msis:msis myfile.php 
+msis@msis-V520S-08IKL:~/banking-app$ sudo echo "my file" > myfile.php 
+msis@msis-V520S-08IKL:~/banking-app$ sudo git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+msis@msis-V520S-08IKL:~/banking-app$ sudo git add myfile.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   about.php
+	new file:   myfile.php
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	githubpw.txt
+
+msis@msis-V520S-08IKL:~/banking-app$ sudo git commit myfile.php -m "My v1 of index file"
+[main 3f3bf0a] My v1 of index file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 myfile.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git push origin main
+Username for 'https://github.com': anikaaendlaw@gmail.com
+Password for 'https://anikaaendlaw%40gmail.com@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 526 bytes | 263.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/AnikaEndlaw/Banking-APP.git
+   fd1f476..3f3bf0a  main -> main
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch
+* main
+  master
+msis@msis-V520S-08IKL:~/banking-app$ ls
+about.php  githubpw.txt  index.php  myfile.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ sudo git checkout -b RD
+Switched to a new branch 'RD'
+msis@msis-V520S-08IKL:~/banking-app$ LS
+LS: command not found
+msis@msis-V520S-08IKL:~/banking-app$ ls
+about.php  githubpw.txt  index.php  myfile.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ touch RD.php
+msis@msis-V520S-08IKL:~/banking-app$ echo "RD against loan" > RD.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git add RD.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git commit RD.php -m "RD feature created"
+[RD 09981a3] RD feature created
+ 1 file changed, 1 insertion(+)
+ create mode 100644 RD.php
+msis@msis-V520S-08IKL:~/banking-app$ ls
+about.php  githubpw.txt  index.php  myfile.php  RD.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ sudo git checkout main
+A	about.php
+Switched to branch 'main'
+msis@msis-V520S-08IKL:~/banking-app$ ls
+about.php  githubpw.txt  index.php  myfile.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch 
+  RD
+* main
+  master
+msis@msis-V520S-08IKL:~/banking-app$ sudo git merge RD
+Updating 3f3bf0a..09981a3
+Fast-forward
+ RD.php | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 RD.php
+msis@msis-V520S-08IKL:~/banking-app$ ls
+about.php  githubpw.txt  index.php  myfile.php  RD.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch
+  RD
+* main
+  master
+msis@msis-V520S-08IKL:~/banking-app$ ls
+about.php  githubpw.txt  index.php  myfile.php  RD.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ sudo git checkout -b FD
+Switched to a new branch 'FD'
+msis@msis-V520S-08IKL:~/banking-app$ sudo git branch
+* FD
+  RD
+  main
+  master
+msis@msis-V520S-08IKL:~/banking-app$ ls
+about.php  githubpw.txt  index.php  myfile.php  RD.php  README.md
+msis@msis-V520S-08IKL:~/banking-app$ touch FD.php
+msis@msis-V520S-08IKL:~/banking-app$ echo "My fd feature" > FD.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git add FD.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git commit FD.php -m "FD feature final version"
+[FD 9448ef5] FD feature final version
+ 1 file changed, 1 insertion(+)
+ create mode 100644 FD.php
+msis@msis-V520S-08IKL:~/banking-app$ sudo git push origin FD
+Username for 'https://github.com': anikaaendlaw@gmail.com
+Password for 'https://anikaaendlaw%40gmail.com@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/AnikaEndlaw/Banking-APP.git/'
+msis@msis-V520S-08IKL:~/banking-app$ sudo git push origin FD
+Username for 'https://github.com': anikaaendlaw@gmail.com
+Password for 'https://anikaaendlaw%40gmail.com@github.com': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 582 bytes | 582.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote: 
+remote: Create a pull request for 'FD' on GitHub by visiting:
+remote:      https://github.com/AnikaEndlaw/Banking-APP/pull/new/FD
+remote: 
+To https://github.com/AnikaEndlaw/Banking-APP.git
+ * [new branch]      FD -> FD
+msis@msis-V520S-08IKL:~/banking-app$ ^C
+msis@msis-V520S-08IKL:~/banking-app$ 
